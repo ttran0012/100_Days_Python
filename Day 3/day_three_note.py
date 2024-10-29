@@ -24,6 +24,10 @@ if condition:
 if condition:
     statement
 
+# Logical Operators
+ and
+ or
+ not
 
 weight = 85
 height = 1.85

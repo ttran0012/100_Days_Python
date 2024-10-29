@@ -1,9 +1,5 @@
 # Write a Pizza Delivery Program
-'''
-    Based on a user's order, work out their final bill. Use the input() function to get user's
-        preferences and then add up the total of their order and tell them how much they have
-            to pay
-
+print('''
     SIZE:
         small pizza (s): $15
         medium pizza (m): $20
@@ -13,7 +9,7 @@
         peperoni (p) : $2
         cheese (c) : $0
 
-'''
+''')
 
 print("Welcome to TAN PIZZERIA!\n")
 
