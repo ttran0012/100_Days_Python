@@ -24,28 +24,28 @@ def ask_size_of_pizza():
     print("What size of Pizza would you like to order? \n -----(s) (m) (l)-----")
 
     while True:
-        get_pizza_size = input("Small pizza (s): $15\nMedium pizza (m): $20\nLarge pizza (l): $25\n")
-        if get_pizza_size == 's' or get_pizza_size == 'S':
+        get_pizza_size = input("1.Small pizza (s): $15\n2.Medium pizza (m): $20\n3.Large pizza (l): $25\n")
+        if get_pizza_size == '1':
             return small_pizza
-        elif get_pizza_size == 'm' or get_pizza_size == 'M':
+        elif get_pizza_size == '2':
             return medium_pizza
-        elif get_pizza_size == 'l' or get_pizza_size == 'L':
+        elif get_pizza_size == '3':
             return large_pizza
         else:
-            print("Invalid Choice! Please select (s) or (m) or (l)")
+            print("Invalid Choice! Please select (1) or (2) or (3)")
 
 def ask_for_topping():
     print("Nice Choice! What would you like for topping?\n")
     peperoni = 2
     sausage = 3
     while True:
-        get_topping = input("Peperoni (P) $2 or Sausage (S) $3 ")
-        if get_topping == 'p' or get_topping == 'P':
+        get_topping = input("1.Peperoni (P) $2\n2.Sausage (S) $3 ")
+        if get_topping == '1':
             return peperoni
-        elif get_topping == 's' or get_topping == 'S':
+        elif get_topping == '2':
             return sausage
         else:
-            print("Invalid Choice! Please select (p) or (s)")
+            print("Invalid Choice! Please select (1) or (2)")
 
 def cal_total(x,y):
     return (x+y) * 0.4
