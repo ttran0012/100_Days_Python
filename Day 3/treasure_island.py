@@ -38,6 +38,18 @@ def good_bye():
 
 
 def cross_road():
+    print('''          |      |
+          |      |
+          |      |
+          |      |
+          |      |
+  ========+======+========
+          |      |
+          |      |
+          |      |
+          |      |
+          |      |
+''')
     get_input = input("You are at a Cross Road. Should you \n1.Turn Left\n2.Turn Right")
     if get_input in ["1","2"]:
         outcome = random.choice(["Game Over","Continue"])
@@ -53,8 +65,8 @@ def cross_road():
         print("Invalid Choice!\nYou broke the system...\nSystem terminating....")
 
 def a_river():
-    print("Congrats! on Making pass the Cross Road!\nAfter a long...endless walk you came across a broken bridge...\n")
-    print("1. Swim (Aligator might get you) or 2. Wait (A boat might come or a Bear might eat you for dinner)")
+    print("Congrats! on Making pass the Cross Road!\nAfter a long...endless walk you came across a broken bridge...What are you going to do?\n")
+    print("1.Swim (An Aligator might get you) OR 2.Wait (A boat might come or a Bear might eat you for dinner)...\nHurry it's getting Dark!")
     get_input = input("Choice is up to you...\n1.SWIM\n2.WAIT")
     if get_input == '2':
         print("Oh ho! Smart! Luckily the Boat made it in time to pick you up before being a Bear Dinner!\nCutting it close there buddy...")
@@ -89,7 +101,7 @@ def a_door():
    \nThe door slowly creeks and open...
    \nYou got 2 Choices.\n1.Do you want to Entered the house to shelter OR \n2.Leave
     ''')
-    get_input = input("This is creepy...oh well....\nWhat would you like to do?")
+    get_input = input("This is creepy...oh well....What would you like to do?")
     if get_input == '1':
         print("You sure are a Brave one!")
         return True
