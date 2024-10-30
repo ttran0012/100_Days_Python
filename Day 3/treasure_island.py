@@ -1,5 +1,7 @@
 import random
 
+from IPython.core.inputsplitter import get_input_encoding
+
 print('''   ,     ,_
            |`\    `;;,            ,;;'
            |  `\    \ '.        .'.'
@@ -22,7 +24,6 @@ print('''   ,     ,_
         Your Mission is to FIND the TREASURE!
 ''')
 def try_again():
-    get_try_again = 'y'
     get_try_again = input("Seems like you make a mistake. Would you like to try again? y/n?")
     if get_try_again.lower() == 'y':
         return cross_road()
@@ -114,16 +115,54 @@ def a_door():
             good_bye()
 
 def a_hallway():
+    print("So you have decided to walk down the long creepy hallway...")
+    get_input = input("You Reached the end of the hall there are 2 doors Left and Right\n1.Open Left Door\n2.Open Right Door\n")
+    if get_input == '1':
+        print("Jack pot! You won!")
+        good_bye()
+    if get_input == '2':
+        print("IDK what's next lol")
+    else:
+        print("Invalid Choice")
+        a_hallway()
+
+def a_left_door():
+    print("You are now facing the Left door...hands are trembling...slowly opening the door...")
+    print("There's a dinner table...full of delicious food. You are drooling...\n")
+    get_input = input("\n1.Do you want to eat? \n2.Back out of the door\n")
+    if get_input == '1':
+        print("You ate the food on the Table and feel full with energy!")
+
+    elif get_input == '2':
+        print("You leave...hungry...")
+        a_three_choice()
+    else:
+        print("Invalid Choice!")
+        return a_left_door()
+
+def a_right_door():
+    print("You are now facing the Right door...hands are trembling...slowly opening the door...")
+    print("\n")
+
+
+
+def a_three_choice():
     print('''There is a long creepy hallway in front of you...a door to your Left and a door to your Right.\n
     What would you like to do? Keep going down the long corridor? or Open the door to your Left or Right?\n
     Make careful choice here....
-    \n1.Hallway
-    \n2.Left Door
-    \n3.Right Door
+    
      ''')
+    get_input = input("\n1.Hallway\n2.Left Door\n3.Right Door\n")
     # hallway
+    if get_input == '1':
+        a_hallway()
     # left_door
+    if get_input == '2':
+        a_left_door()
+
     # right_door
+    if get_input == '3':
+        a_right_door()
 
 
 
@@ -132,9 +171,9 @@ def main():
     if cross_road():
         a_river()
         a_door()
+        a_three_choice()
     else:
        good_bye()
-
 
 
 #run function
