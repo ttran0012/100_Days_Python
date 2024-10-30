@@ -113,6 +113,18 @@ def a_door():
         else:
             good_bye()
 
+def a_hallway():
+    print('''There is a long creepy hallway in front of you...a door to your Left and a door to your Right.\n
+    What would you like to do? Keep going down the long corridor? or Open the door to your Left or Right?\n
+    Make careful choice here....
+    \n1.Hallway
+    \n2.Left Door
+    \n3.Right Door
+     ''')
+    # hallway
+    # left_door
+    # right_door
+
 
 
 def main():
